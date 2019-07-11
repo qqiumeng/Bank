@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block take %}
+active
+{% endblock %}
+
+{% block body %}
+
+
+    <form action="{% url 'take' %}" method="post">
+
+    {% csrf_token %}
+        <table>
+            <tr>
+                <td>取款金额</td>
+                <td><input type="text" name="money"></td>
+            </tr>
+            <tr>
+                <td><input type="submit"></td>
+            </tr>
+        </table>
+
+
+    </form>
+
+
+{% endblock %}
+

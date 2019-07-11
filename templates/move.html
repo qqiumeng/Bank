@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+{% block move %}
+active
+{% endblock %}
+
+{% block title %}
+move
+{% endblock %}
+
+{% block body %}
+
+
+    <form action="{% url 'move' %}" method="post">
+    {% csrf_token %}
+
+    <table>
+            <tr>
+                <td>转账的卡号：</td>
+                <td><input type="text" name="card_num_2"></td>
+            </tr>
+            <tr>
+                <td>转账的金额：</td>
+                <td><input type="text" name="card_money"></td>
+            </tr>
+            <tr>
+                <td><input type="submit"></td>
+            </tr>
+    </table>
+
+
+
+    </form>
+
+
+{% endblock %}
+
+
